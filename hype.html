@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyprTip - Support the Streamer</title>
+    <link rel="stylesheet" href="tip.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="ring"></div>
+    <p>Loading...</p>
+</div>
+
+<div class="bg-grid"></div>
+
+<h1 class="title neon">HyprTip</h1>
+
+<div class="container">
+
+    <div class="banner neon-banner">
+        <img src="bf6.webp" alt="Streamer Banner">
+        <div class="banner-text">Abhinav’s HyprTip Page</div>
+    </div>
+
+    <div class="card neon-card">
+
+        <label>Amount:</label>
+        <div class="amount-row">
+            <input class="neon-input" type="number" id="amount" value="40">
+            <select class="neon-input" id="currency">
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+            </select>
+        </div>
+
+        <label>Your Name:</label>
+        <input class="neon-input" type="text" id="name" placeholder="Anonymous" />
+
+        <label>Message:</label>
+        <textarea class="neon-input" id="message" maxlength="100" placeholder="Message for the streamer"></textarea>
+        <div class="counter"><span id="count">100</span> characters left</div>
+
+        <button class="neon-button" id="sendBtn" onclick="payNow()">Send HyprTip</button>
+        
+<footer class="footer">
+    <p>© 2025 HyprTip • Made By Abhinav & Amritanshu</p>
+
+    
+</footer>
+
+
+    </div>
+
+</div>
+
+<script src="hypr.js"></script>
+</body>
+</html>

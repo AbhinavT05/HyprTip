@@ -1,0 +1,238 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #050505;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* =============== ANIMATED GRID BACKGROUND =============== */
+.bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(rgba(0,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.07) 1px, transparent 1px);
+    animation: move 8s linear infinite;
+    z-index: -1;
+}
+
+@keyframes move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 40px); }
+}
+
+/* =============== NEON GLOW =============== */
+.neon {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0800;
+}
+
+.neon-card {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.35);
+}
+
+.neon-banner img {
+    box-shadow: 0 0 20px rgba(255, 21, 0, 0.4);
+}
+
+.neon-input {
+    border: 1px solid rgba(255, 4, 0, 0.4);
+    box-shadow: 0 0 7px rgba(255, 0, 0, 0.25);
+}
+
+.neon-input:focus {
+    box-shadow: 0 0 12px rgba(255, 4, 0, 0.7);
+    border-color: rgb(255, 0, 0);
+}
+
+/* Neon Button */
+.neon-button {
+    width: 100%;
+    background: #ff0000;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    color: #000;
+    text-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 15px rgba(255, 13, 0, 0.5);
+}
+
+.neon-button:hover {
+    background: #ff0000;
+    box-shadow: 0 0 25px rgba(255, 13, 0, 0.9);
+}
+
+/* Title */
+.title {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgb(255, 8, 0);
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 4, 0, 0.1);
+}
+
+/* Inputs */
+.card input, 
+.card select,
+.card textarea {
+    width: 100%;
+    margin: 8px 0 16px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    outline: none;
+}
+
+.amount-row {
+    display: flex;
+    gap: 10px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Counter */
+.counter {
+    font-size: 12px;
+    text-align: right;
+    opacity: 0.7;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+}
+
+/* =============== LOADER =============== */
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+#loader p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ff1100;
+    text-shadow: 0 0 10px #ff0d00;
+}
+
+.ring {
+    width: 70px;
+    height: 70px;
+    border: 5px solid transparent;
+    border-top: 5px solid rgb(255, 13, 0);
+    border-radius: 50%;
+    animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgb(255, 30, 0); }
+    50% { box-shadow: 0 0 25px rgb(255, 13, 0); }
+    100% { box-shadow: 0 0 5px rgb(255, 0, 0); }
+}
+/* ================= FOOTER ================= */
+
+.footer {
+    margin-top: 40px;
+    padding: 20px 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgb(255, 0, 0);
+    box-shadow: 0 -0px 15px rgba(255, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.footer p {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgb(255, 0, 0);
+}
+
+
+
+
+
+
+/* Responsive footer */
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 12px;
+    }
+}
+
