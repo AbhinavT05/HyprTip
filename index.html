@@ -57,6 +57,39 @@
 
 </div>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    const sendBtn = document.getElementById("sendBtn");
+
+    sendBtn.addEventListener("click", function () {
+
+        let amountInput = document.getElementById("amount").value;
+
+        if (!amountInput || amountInput <= 0) {
+            alert("Enter a valid amount");
+            return;
+        }
+
+        let amountInPaise = amountInput * 100; // Razorpay uses paise
+
+        var options = {
+            "key": "rzp_live_RgX7mNYXvumykw",
+            "amount": amountInPaise,
+            "currency": "INR",
+            "name": "Streamer Donation",
+            "description": "Thank you for supporting the stream!",
+            "image": "your-logo.png",
+            "handler": function (response) {
+                alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+            },
+            "theme": {
+                "color": "#8a2be2"
+            }
+        };
+
+        var rzp = new Razorpay(options);
+        rzp.open();
+    });
+</script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 // Character counter
 const messageBox = document.getElementById("message");
 const counter = document.getElementById("count");
+const sendbtn =document.getElementById("sendBtn");
 
 messageBox.addEventListener("input", () => {
     counter.textContent = 100 - messageBox.value.length;
@@ -12,7 +13,7 @@ window.onload = () => {
         document.getElementById("loader").style.display = "none";
     }, 1500);
 };
-
+sendbtn.addEventListener('click',
 // Razorpay placeholder
 async function payNow() {
     let amount = document.getElementById("amount").value;
@@ -35,7 +36,7 @@ async function payNow() {
 
     // 2️⃣ Open Razorpay popup
     let options = {
-        "key": "YOUR_RAZORPAY_KEY_ID",
+        "key": "rzp_live_RgX7mNYXvumykw",
         "amount": order.amount,
         "currency": "INR",
         "name": name,
@@ -54,5 +55,5 @@ async function payNow() {
 
     let rzp = new Razorpay(options);
     rzp.open();
-}
+});
 
