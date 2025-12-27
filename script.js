@@ -36,7 +36,7 @@ async function payNow() {
 
     // 2️⃣ Open Razorpay popup
     let options = {
-        "key": "rzp_live_RgX7mNYXvumykw",
+        "key": "rzp_live_Rwk31ccZOcAAhc",
         "amount": order.amount,
         "currency": "INR",
         "name": name,
